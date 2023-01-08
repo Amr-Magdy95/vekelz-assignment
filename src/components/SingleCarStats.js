@@ -12,7 +12,7 @@ function SingleCarStats({ name, recommended, rental_price, img, kms, color }) {
       <div className="card-img-container">
         <img src={img} alt="" className="card-img img" />
       </div>
-      <h4 className="card-title">{name}</h4>
+      <h5 className="card-title">{name}</h5>
       <div className="card-info">
         <div className="car-stats">
           <RepIcon />
@@ -66,6 +66,11 @@ const Wrapper = styled.article`
   }
   svg{
     transform: scale(1.25);
+  }
+
+  .car-price{
+    font-size: 1.25rem;
+  }
 
 
 `;

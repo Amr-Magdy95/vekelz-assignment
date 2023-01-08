@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AiFillCar } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
+import { Logo } from "../assets/icons";
 
 function Sidebar() {
   return (
     <Wrapper>
-      <h2 className="title">Motiv</h2>
-      <Link to="/" className="nav-item">
-        {" "}
-        <span className="logo">
-          {" "}
-          <AiFillCar />{" "}
-        </span>{" "}
-        Booking
-      </Link>
+      <div className="header">
+      <div className="logo-container">
+        <Logo />
+      </div>
+      <h2>Motiv.</h2>
+
+      </div>
       <Link to="/dashboard" className="nav-item">
         {" "}
         <span className="logo">
@@ -23,6 +22,14 @@ function Sidebar() {
           <MdDashboard />{" "}
         </span>{" "}
         Dashboard
+      </Link>
+      <Link to="/" className="nav-item">
+        {" "}
+        <span className="logo">
+          {" "}
+          <AiFillCar />{" "}
+        </span>{" "}
+        Booking
       </Link>
     </Wrapper>
   );
@@ -35,8 +42,25 @@ const Wrapper = styled.section`
   left: 0;
   height: 100%;
   padding: 1rem 2rem;
-  .title{
-    color: var(--clr-primary-5);
+  .header{
+    margin-bottom: 2rem;
+    margin-top: 0.75rem;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .logo-container{
+    display: flex;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: 1rem;
+    background: var(--clr-purple-6);
+    padding: 0.5rem 1rem;
+
+    svg{
+      transform: scale(2);
+    }
   }
   @media (min-width: 992px) {
     display: block;

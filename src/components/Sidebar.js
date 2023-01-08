@@ -77,7 +77,7 @@ const Wrapper = styled.section`
   }
   a:hover {
     border-left: 5px solid var(--clr-primary-7);
-    padding-left: 5px;
+    padding-left: 10px;
     color: var(--clr-primary-7);
     background: var(--clr-primary-1);
     transform: scale(1.1);

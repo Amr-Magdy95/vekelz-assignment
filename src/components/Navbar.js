@@ -117,12 +117,18 @@ const Wrapper = styled.section`
   span {
     font-size: 2rem;
   }
-  .nav-content {
-    display: none;
+  @media (max-width: 992px){
+    .nav-content {
+      height: 0px;
+      overflow: hidden;
+      
+      transition: var(--transition);
+    }
+    .show-content {
+      height: 160px;
+    }
   }
-  .show-content {
-    display: block;
-  }
+  
 
   @media (min-width: 992px) {
     width: 80vw;

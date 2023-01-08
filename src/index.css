@@ -1,13 +1,154 @@
-body {
+/*
+Global Styles
+*/
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap'); 
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+#root{
+  height: 100%;
+}
+*,
+::before,
+::after{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root{
+  /* primary colors */
+  --clr-primary-1: #d2d6d9;
+  --clr-primary-2: #a4acb3;
+  --clr-primary-3: #77838d;
+  --clr-primary-4: #495967;
+  --clr-primary-5: #1c3041;
+  --clr-primary-6: #162634;
+  --clr-primary-7: #111d27;
+  --clr-primary-8: #0b131a;
+  --clr-primary-9: #060a0d;
+  --clr-primary-10: #000000;
+  /* secondary colors */
+  --clr-secondary-1: #fef2f2;
+  --clr-secondary-2: #fee2e2 ;
+  --clr-secondary-3: #fecaca;
+  --clr-secondary-4: #fca5a5;
+  --clr-secondary-5: #f87171;
+  --clr-secondary-6: #ef4444;
+  --clr-secondary-7: #dc2626;
+  --clr-secondary-8: #b91c1c;
+  --clr-secondary-9: #991b1b;
+  --clr-secondary-10: #7f1d1d;
+  /* grey colors */
+  --clr-grey-1: #f9fafb;
+  --clr-grey-2: #f3f4f6;
+  --clr-grey-3: #e5e7eb;
+  --clr-grey-4: #d1d5db;
+  --clr-grey-5: #9ca3af;
+  --clr-grey-6: #6b7280;
+  --clr-grey-7: #4b5563;
+  --clr-grey-8: #374151;
+  --clr-grey-9: #1f2937;
+  --clr-grey-10: #111827;
+  /* purple colors*/
+  --clr-purple-1: #faf5ff;
+  --clr-purple-2: #f3f4f6;
+  --clr-purple-3: #e9d5ff;
+  --clr-purple-4: #c084fc;
+  --clr-purple-5: #c084fc;
+  --clr-purple-6: #a855f7;
+  --clr-purple-7: #7e22ce;
+  --clr-purple-8: #7e22ce;
+  --clr-purple-9: #6b21a8;
+  --clr-purple-10: #581c87;
+  /* rest of colors*/
+  --clr-yellow-dark: #facc15;
+  --clr-yellow-light: #fef9c3;
+  --black: #222;
+  --white: #fff;
+  /* fonts*/
+  --font-family: Roboto;
+  /* rest of the vars*/
+  --backgroundColor: var(--clr-grey-1);
+  --textColor: var(--clr-grey-8);
+  --borderRadius: 0.5rem;
+  --letterSpacing: 1px;
+  --transition: 0.4s ease-in-out all;
+  --max-width: 1170px;
+  --fixed-width: 600px;
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+}
+
+body{
+  background: var(--backgroundColor);
+  font-weight: 400;
+  line-height: 1.75;
+  font-family: var(--font-family);
+  color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text-small {
+  font-size: var(--small-text);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  
 }

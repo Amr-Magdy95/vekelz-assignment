@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import styled from "styled-components";
+import { Navbar, Sidebar, Booking, Dashboard, Footer } from "./components";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <BrowserRouter>
+        <Sidebar />
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Booking />}></Route>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.section`
+  @media screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 0;
+    
+  }
+`;
 
 export default App;

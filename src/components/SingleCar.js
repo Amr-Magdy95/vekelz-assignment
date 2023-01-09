@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { FaUserAlt } from "react-icons/fa";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { BsFillGearFill } from "react-icons/bs";
+
+import { GearIcon2, PassengerIcon, EmptyHeart, FullHeart } from "../assets/icons";
 
 function SingleCar({
   name,
@@ -19,7 +19,7 @@ function SingleCar({
     <Wrapper className="container">
       <div className="header">
         <h5>{name}</h5>
-        <span onClick={()=>setFavorite(id)}> {favorite ? <AiFillHeart /> : <AiOutlineHeart />} </span>
+        <span onClick={()=>setFavorite(id)}> {favorite ? <FullHeart /> : <EmptyHeart />} </span>
       </div>
       <p className="car-type">{type}</p>
       <div className="car-img-container">
@@ -29,11 +29,11 @@ function SingleCar({
         <div className="info">
           <span className="passengers">
             {" "}
-            <FaUserAlt /> {passengers}
+            <PassengerIcon /> {passengers}
           </span>
           <span className="gear-type">
             {" "}
-            <BsFillGearFill /> {gear_type}
+            <GearIcon2 /> {gear_type}
           </span>
         </div>
         <div className="price-container">

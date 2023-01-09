@@ -4,6 +4,7 @@ import { SlEnergy } from "react-icons/sl";
 import { GiFlatTire } from "react-icons/gi";
 import { BsFillDropletFill } from "react-icons/bs";
 import { FaArrowsAltV } from "react-icons/fa";
+import { Energy2, ArrowIcon, DropletIcon, TireIcon } from "../../assets/icons";
 
 
 function Progress() {
@@ -11,7 +12,7 @@ function Progress() {
     <Wrapper>
       <div className="progress-card energy">
         <div className="progress-icon">
-          <SlEnergy />
+          <Energy2 />
         </div>
         <h4 className="progress-title">Energy</h4>
         <div className="ui-widgets">
@@ -20,7 +21,7 @@ function Progress() {
       </div>
       <div className="progress-card range">
         <div className="progress-icon">
-          <FaArrowsAltV />
+          <ArrowIcon />
         </div>
         <h4 className="progress-title">Range</h4>
         <div className="ui-widgets">
@@ -29,7 +30,7 @@ function Progress() {
       </div>
       <div className="progress-card fluid">
         <div className="progress-icon">
-          <BsFillDropletFill />
+          <DropletIcon />
         </div>
         <h4 className="progress-title">Break Fluid</h4>
         <div className="ui-widgets">
@@ -38,7 +39,7 @@ function Progress() {
       </div>
       <div className="progress-card tire-wear">
         <div className="progress-icon">
-          <GiFlatTire />
+          <TireIcon />
         </div>
         <h4 className="progress-title">Tire Wear</h4>
         <div className="ui-widgets">
@@ -88,7 +89,7 @@ const Wrapper = styled.section`
     border-radius: 50%;
     border-color: transparent;
     svg {
-      font-size: 2rem;
+      transform: scale(1.5);
     }
   }
   .ui-widgets {

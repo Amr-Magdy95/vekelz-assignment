@@ -9,8 +9,8 @@ function App() {
         <div>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Booking />}></Route>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/" element={<Dashboard />}></Route>
+            <Route path="/booking" element={<Booking />}></Route>
           </Routes>
         </div>
       </BrowserRouter>

@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { AiFillCar } from "react-icons/ai";
-import { MdDashboard } from "react-icons/md";
 import { Logo } from "../assets/icons";
+import { DashboardIcon, BookingIcon } from "../assets/icons";
 
 function Sidebar() {
   return (
@@ -15,19 +14,19 @@ function Sidebar() {
       <h2>Motiv.</h2>
 
       </div>
-      <Link to="/dashboard" className="nav-item">
-        {" "}
-        <span className="logo">
-          {" "}
-          <MdDashboard />{" "}
-        </span>{" "}
-        Dashboard
-      </Link>
       <Link to="/" className="nav-item">
         {" "}
         <span className="logo">
           {" "}
-          <AiFillCar />{" "}
+          <DashboardIcon />{" "}
+        </span>{" "}
+        Dashboard
+      </Link>
+      <Link to="/booking" className="nav-item">
+        {" "}
+        <span className="logo">
+          {" "}
+          <BookingIcon />{" "}
         </span>{" "}
         Booking
       </Link>

@@ -15,6 +15,8 @@ import { NotifIcon } from "./NotifIcon";
 import { EmptyHeart } from "./EmptyHeart";
 import { FullHeart } from "./FullHeart";
 import { PassengerIcon } from "./PassengerIcon";
+import { View } from "./View";
+import { DashIcon } from "./DashIcon";
 export {
     RIcon,
     RepIcon,
@@ -32,6 +34,8 @@ export {
     EmptyHeart,
     FullHeart,
     GearIcon2,
-    PassengerIcon
+    PassengerIcon,
+    View,
+    DashIcon
 
 }

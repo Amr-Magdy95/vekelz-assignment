@@ -54,7 +54,7 @@ const Wrapper = styled.section`
     align-items: center;
     height: 3rem;
     border-radius: 1rem;
-    background: var(--clr-purple-6);
+    background: var(--clr-purple-dark);
     padding: 0.5rem 1rem;
 
     svg{
@@ -70,15 +70,15 @@ const Wrapper = styled.section`
   z-index: 10;
   a {
     display: block;
-    color: var(--clr-primary-8);
+    color: var(--clr-purple-dark);
     transition: var(--transition);
     font-size: 1.25rem;
   }
   a:hover {
-    border-left: 5px solid var(--clr-primary-7);
+    border-left: 5px solid var(--clr-primary-1);
     padding-left: 10px;
-    color: var(--clr-primary-7);
-    background: var(--clr-primary-1);
+    color: var(--clr-primary-1);
+    background: var(--clr-grey-1);
     transform: scale(1.1);
   }
 `;

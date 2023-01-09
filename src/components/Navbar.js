@@ -96,14 +96,14 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     column-gap: 10px;
-    background: var(--clr-grey-2);
+    background: var(--clr-grey-1);
     border-radius: var(--borderRadius);
     svg {
       transform: scale(1.25);
       color: var(--clr-primary-4);
     }
     input {
-      background: var(--clr-grey-2);
+      background: var(--clr-grey-1);
       width: 17rem;
       height: 2rem;
       color: var(--clr-primary-4);
@@ -120,8 +120,17 @@ const Wrapper = styled.section`
     display: block;
     font-size: 1.5rem;
   }
+  @keyframes Logo{
+    0%{ transform: scale(1);}
+    25%{ transform: scale(1.1);}
+    50%{ transform: scale(1.2);}
+    75%{ transform: scale(1.1);}
+    100%{ transform: scale(1);}
+  }
   .bars {
     transition: var(--transition);
+    color: var(--clr-purple-dark);
+    animation: Logo 2s linear infinite;
   }
   .nav-icons {
     display: flex;

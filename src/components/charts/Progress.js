@@ -6,7 +6,6 @@ import { BsFillDropletFill } from "react-icons/bs";
 import { FaArrowsAltV } from "react-icons/fa";
 import { Energy2, ArrowIcon, DropletIcon, TireIcon } from "../../assets/icons";
 
-
 function Progress() {
   return (
     <Wrapper>
@@ -50,7 +49,6 @@ function Progress() {
   );
 }
 
-
 const Wrapper = styled.section`
   padding: 1rem 2rem;
   .progress-card {
@@ -76,7 +74,7 @@ const Wrapper = styled.section`
       width: 24%;
     }
   }
-  .progress-title{
+  .progress-title {
     font-weight: 900;
   }
   .progress-icon {
@@ -100,7 +98,6 @@ const Wrapper = styled.section`
     margin: 0 auto;
     border: 1.2rem solid var(--white);
     text-align: center;
-    
   }
 
   .ui-widgets .ui-values {
@@ -112,42 +109,38 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
   .energy {
-    background: var(--clr-purple-6);
+    background: var(--clr-purple-dark);
     color: var(--white);
     transition: var(--transition);
   }
   .energy .progress-icon {
-    background: var(--clr-purple-4);
+    background: var(--clr-purple-light);
   }
   .energy .ui-widgets {
-    border-bottom-color: var(--clr-purple-6);
-    border-right-color: var(--clr-purple-4);
-    border-top-color: var(--clr-purple-4);
+    border-bottom-color: var(--clr-purple-dark);
+    border-right-color: var(--clr-grey-1);
+    border-top-color: var(--clr-grey-1);
   }
   .energy:hover {
     transform: scale(1.05);
-    background: var(--clr-purple-8);
     box-shadow: var(--shadow-4);
-  }
-  .energy:hover .ui-widgets {
-    border-bottom-color: var(--clr-purple-8);
   }
   .range {
     background: var(--white);
-    color: var(--black);
     transition: var(--transition);
   }
   .range .progress-icon {
-    background: var(--clr-secondary-2);
-    color: var(--clr-secondary-6);
-    svg{
-        font-size: 1.875rem;
+    background: var(--clr-pink-light);
+    svg {
+      font-size: 1.875rem;
+
     }
   }
   .range .ui-widgets {
     border-bottom-color: var(--white);
-    border-left-color: var(--clr-secondary-6);
-    border-top-color: var(--clr-secondary-6);
+    border-left-color: var(--clr-pink-dark);
+    border-top-color: var(--clr-pink-dark);
+    border-right-color: var(--clr-grey-1);
   }
   .range:hover {
     transform: scale(1.05);
@@ -159,14 +152,15 @@ const Wrapper = styled.section`
     transition: var(--transition);
   }
   .fluid .progress-icon {
-    background: var(--clr-grey-2);
-    svg{
-        color: var(--clr-purple-6);
+    background: var(--clr-grey-1);
+    svg {
+      color: var(--clr-purple-6);
     }
   }
   .fluid .ui-widgets {
+    border-color: var(--clr-grey-1);
     border-bottom-color: var(--white);
-    border-left-color: var(--clr-purple-6);
+    border-left-color: var(--clr-purple-dark);
   }
   .fluid:hover {
     transform: scale(1.05);
@@ -179,8 +173,8 @@ const Wrapper = styled.section`
   }
   .tire-wear .progress-icon {
     background: var(--clr-yellow-light);
-    svg{
-        color: var(--clr-yellow-dark);
+    svg {
+      color: var(--clr-yellow-dark);
     }
   }
   .tire-wear .ui-widgets {
@@ -190,7 +184,7 @@ const Wrapper = styled.section`
   .tire-wear:hover {
     transform: scale(1.05);
     box-shadow: var(--shadow-4);
-  }  
+  }
 `;
 
 export default Progress;

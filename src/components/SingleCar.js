@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { FaUserAlt } from "react-icons/fa";
 
-import { GearIcon2, PassengerIcon, EmptyHeart, FullHeart } from "../assets/icons";
+import {
+  GearIcon2,
+  PassengerIcon,
+  EmptyHeart,
+  FullHeart,
+} from "../assets/icons";
 
 function SingleCar({
   name,
@@ -13,13 +18,16 @@ function SingleCar({
   rental_price,
   favorite,
   setFavorite,
-  id
+  id,
 }) {
   return (
     <Wrapper className="container">
       <div className="header">
         <h5>{name}</h5>
-        <span onClick={()=>setFavorite(id)}> {favorite ? <FullHeart /> : <EmptyHeart />} </span>
+        <span onClick={() => setFavorite(id)}>
+          {" "}
+          {favorite ? <FullHeart /> : <EmptyHeart />}{" "}
+        </span>
       </div>
       <p className="car-type">{type}</p>
       <div className="car-img-container">
@@ -27,14 +35,8 @@ function SingleCar({
       </div>
       <div className="footer">
         <div className="info">
-          <span className="passengers">
-            {" "}
-            <PassengerIcon /> {passengers}
-          </span>
-          <span className="gear-type">
-            {" "}
-            <GearIcon2 /> {gear_type}
-          </span>
+          <PassengerIcon /> {passengers}
+          <GearIcon2 /> {gear_type}
         </div>
         <div className="price-container">
           {" "}
@@ -62,6 +64,9 @@ const Wrapper = styled.article`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    span {
+      cursor: pointer;
+    }
     svg {
       font-size: 1.5rem;
       color: var(--clr-secondary-6);
@@ -100,6 +105,9 @@ const Wrapper = styled.article`
   .info {
     display: flex;
     align-items: center;
+    justify-content:center;
+    column-gap: 8px;
+    text-transform: capitalize;
   }
   .passengers,
   .gear-type {

@@ -8,7 +8,6 @@ function Booking() {
   const [allCars, setAllCars] = useState(cars);
 
   const setFavorite = (id) => {
-    console.log(id);
     setAllCars((prevCars) => {
       console.log(prevCars);
       return prevCars.map((item) => {
@@ -52,15 +51,37 @@ function Booking() {
   );
 }
 const Container = styled.main`
+.view-filters {
+  align-self: flex-end;
+  justify-content: center;
+  display: flex;
+  column-gap: 15px;
+}
+.car-filters{
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  margin-bottom: 1rem;
+}
+
+
+@media (min-width: 568px ){
   .filters {
-    display: flex;
-    justify-content: space-between;
-  }
-  .car-filters {
-    display: flex;
-    column-gap: 15px;
-    align-self: flex-start;
-  }
+      display: flex;
+        justify-content: space-between;
+      }
+      .car-filters {
+        display: flex;
+        column-gap: 15px;
+        align-self: flex-start;
+      }
+      .view-filters {
+        align-self: flex-end;
+        display: flex;
+        column-gap: 15px;
+      }
+
+  }  
   select {
     border-radius: 20px 20px 20px 20px;
     border-color: var(--clr-grey-1);
@@ -72,11 +93,7 @@ const Container = styled.main`
   
     }
   }
-  .view-filters {
-    align-self: flex-end;
-    display: flex;
-    column-gap: 15px;
-  }
+  
   .dash-icon {
     height: 2rem;
     width: 2rem;

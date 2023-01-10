@@ -129,7 +129,9 @@ ul {
 }
 
 
-
+.chart-container{
+  width: 100%;
+}
 @media (min-width: 1170px){
   .chart-container{
     display: flex;

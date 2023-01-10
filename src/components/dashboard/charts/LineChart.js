@@ -17,13 +17,13 @@ function LineChart(props) {
 
     // data
     let data = [
-      { date: new Date(2018, 3, 20, 1), name: "name" + 0, value: 150000 },
-      { date: new Date(2018, 3, 20, 2), name: "name" + 1, value: 152000 },
-      { date: new Date(2018, 3, 20, 3), name: "name" + 2, value: 156000 },
-      { date: new Date(2018, 3, 20, 4), name: "name" + 3, value: 157000 },
-      { date: new Date(2018, 3, 20, 5), name: "name" + 4, value: 160000 },
-      { date: new Date(2018, 3, 20, 6), name: "name" + 5, value: 154000 },
-      { date: new Date(2018, 3, 20, 7), name: "name" + 6, value: 153000 },
+      { date: new Date(2018, 3, 20, 1), name: "name" + 0, value: 1500 },
+      { date: new Date(2018, 3, 20, 2), name: "name" + 1, value: 1000 },
+      { date: new Date(2018, 3, 20, 3), name: "name" + 2, value: 1000 },
+      { date: new Date(2018, 3, 20, 4), name: "name" + 3, value: 1500 },
+      { date: new Date(2018, 3, 20, 5), name: "name" + 4, value: 1000 },
+      { date: new Date(2018, 3, 20, 6), name: "name" + 5, value: 1540 },
+      { date: new Date(2018, 3, 20, 7), name: "name" + 6, value: 1530 },
     ];
     x.data = data;
 
@@ -82,7 +82,7 @@ function LineChart(props) {
 
   return (
     <Wrapper className="chart-wrapper">
-      <h3>Miles <span>Statistics</span></h3>
+      <h3>Car <span>Statistics</span></h3>
       <div className="subheading-container">
       <span className="milage">20 February 2022</span>
       <ul className="tab-container">
@@ -100,7 +100,20 @@ function LineChart(props) {
 }
 
 const Wrapper = styled.section`
-width: 49%;
+@media screen and (min-width: 200px){
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px){
+  width: 95%;
+  
+}
+@media screen and (min-width: 1170px){
+
+  width: 49%;
+}
+
 background: var(--white);
 border-radius: var(--borderRadius);
 padding: 1.5rem 2rem 0 2rem;

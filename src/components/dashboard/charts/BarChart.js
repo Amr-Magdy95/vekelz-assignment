@@ -41,8 +41,6 @@ function BarChart(props) {
     dateAxis.renderer.labels.template.fontSize = 20;
     dateAxis.startLocation = 0.5;
     dateAxis.endLocation = 0.5;
-    dateAxis.renderer.cellStartLocation = 0.2;
-    dateAxis.renderer.cellEndLocation = 0.9;
     dateAxis.renderer.labels.template.rotation = 90;
     dateAxis.renderer.labels.template.verticalCenter = "middle";
     dateAxis.renderer.labels.template.horizontalCenter = "left";
@@ -100,7 +98,21 @@ function BarChart(props) {
 }
 
 const Wrapper = styled.section`
-width: 49%;
+
+@media screen and (min-width: 200px){
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px){
+  width: 95%;
+  
+}
+@media screen and (min-width: 1170px){
+
+  width: 49%;
+}
+
 background: var(--white);
 border-radius: var(--borderRadius);
 padding: 1.5rem 2rem 0 2rem;

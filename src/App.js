@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Navbar, Sidebar, Booking, Dashboard, Footer } from "./components";
+import { Navbar, Sidebar, Booking, Dashboard } from "./components";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
   return (

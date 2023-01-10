@@ -1,8 +1,8 @@
-import Navbar from './Navbar';
-import Booking from './Booking';
-import Sidebar from './Sidebar';
-import Dashboard from './Dashboard';
-import Footer from './Footer';
+import Navbar from './layout/Navbar';
+import Booking from './booking/Booking';
+import Sidebar from './layout/Sidebar';
+import Dashboard from './dashboard/Dashboard';
+import Footer from './layout/Footer';
 
 export{
     Navbar,

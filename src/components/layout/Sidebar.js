@@ -1,18 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Logo } from "../assets/icons";
-import { DashboardIcon, BookingIcon } from "../assets/icons";
+import { Logo, DashboardIcon, BookingIcon } from "../../assets/icons";
 
 function Sidebar() {
   return (
     <Wrapper>
       <div className="header">
-      <div className="logo-container">
-        <Logo />
-      </div>
-      <h2>Motiv.</h2>
-
+        <div className="logo-container">
+          <Logo />
+        </div>
+        <h2>Motiv.</h2>
       </div>
       <Link to="/" className="nav-item">
         {" "}
@@ -41,13 +39,17 @@ const Wrapper = styled.section`
   left: 0;
   height: 100%;
   padding: 1rem 2rem;
-  .header{
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+  height: 100%;
+  z-index: 10;
+  .header {
     margin-bottom: 2rem;
     margin-top: 0.75rem;
     display: flex;
     column-gap: 0.5rem;
   }
-  .logo-container{
+  .logo-container {
     display: flex;
     width: 3rem;
     justify-content: center;
@@ -57,17 +59,14 @@ const Wrapper = styled.section`
     background: var(--clr-purple-dark);
     padding: 0.5rem 1rem;
 
-    svg{
+    svg {
       transform: scale(2);
     }
   }
   @media (min-width: 992px) {
     display: block;
   }
-  background: var(--white);
-  box-shadow: var(--shadow-1);
-  height: 100%;
-  z-index: 10;
+
   a {
     display: block;
     color: var(--clr-purple-dark);

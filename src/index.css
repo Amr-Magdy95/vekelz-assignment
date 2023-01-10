@@ -25,7 +25,8 @@ body {
   --clr-purple-light: #b989f9;
   --clr-pink-dark: #ff7e86;
   --clr-pink-light: #ffdfe1;
-
+  --clr-yellow-dark: #facc15;
+  --clr-yellow-light: #fef9c3;
   --clr-primary-1: #242731;
   --clr-primary-2: #e0e4e7;
   /* secondary colors */
@@ -43,8 +44,7 @@ body {
   --clr-grey-5: #5f6165;
   --clr-grey-6: #242731;
   /* rest of colors*/
-  --clr-yellow-dark: #facc15;
-  --clr-yellow-light: #fef9c3;
+  
   --black: #222;
   --white: #fff;
   /* fonts*/
@@ -126,4 +126,14 @@ ul {
 .img {
   width: 100%;
   display: block;
+}
+
+
+
+@media (min-width: 1170px){
+  .chart-container{
+    display: flex;
+    column-gap: 1rem;
+
+}
 }

@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SlEnergy } from "react-icons/sl";
-import { GiFlatTire } from "react-icons/gi";
-import { BsFillDropletFill } from "react-icons/bs";
-import { FaArrowsAltV } from "react-icons/fa";
-import { Energy2, ArrowIcon, DropletIcon, TireIcon } from "../../assets/icons";
+import { Energy2, ArrowIcon, DropletIcon, TireIcon } from "../../../assets/icons";
 
 function Progress() {
   return (
@@ -50,7 +46,6 @@ function Progress() {
 }
 
 const Wrapper = styled.section`
-  padding: 1rem 2rem;
   .progress-card {
     width: 80%;
     margin-bottom: 1rem;

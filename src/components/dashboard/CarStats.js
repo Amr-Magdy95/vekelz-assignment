@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import SingleCarStats from './SingleCarStats'
-import { carStats } from '../data';
+import { carStats } from '../../data';
 
 function CarStats() {
   const [cars, setCars] = useState(carStats);

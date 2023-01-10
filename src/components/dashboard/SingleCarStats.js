@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { RIcon, RepIcon, GearIcon, EnergyIcon } from "../assets/icons";
+import { RIcon, RepIcon, GearIcon, EnergyIcon } from "../../assets/icons";
 
 function SingleCarStats({ name, recommended, rental_price, img, kms, color }) {
   return (

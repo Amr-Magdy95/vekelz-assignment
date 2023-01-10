@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import User from '../assets/images/User.jpg';
+import User from "../../assets/images/User.jpg";
 import {
   DashboardIcon,
   BookingIcon,
   SearchIcon,
   NotifIcon,
-} from "../assets/icons";
+} from "../../assets/icons";
 
 function Navbar() {
   const [showContent, setShowContent] = useState(false);
@@ -51,8 +51,7 @@ function Navbar() {
         </div>
         <div className="nav-icons">
           <div className="notif-icon">
-          <NotifIcon className="" />
-
+            <NotifIcon className="" />
           </div>
 
           <div className="user-icon">
@@ -120,12 +119,22 @@ const Wrapper = styled.section`
     display: block;
     font-size: 1.5rem;
   }
-  @keyframes Logo{
-    0%{ transform: scale(1);}
-    25%{ transform: scale(1.1);}
-    50%{ transform: scale(1.2);}
-    75%{ transform: scale(1.1);}
-    100%{ transform: scale(1);}
+  @keyframes Logo {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   .bars {
     transition: var(--transition);
@@ -167,7 +176,7 @@ const Wrapper = styled.section`
     }
     display: flex;
   }
-  .user-icon{
+  .user-icon {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -175,21 +184,21 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
+    img {
       object-fit: cover;
     }
   }
-  .notif-icon{
+  .notif-icon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    svg{
+    svg {
       transform: scale(1.25);
     }
-    &:before{
+    &:before {
       position: absolute;
-      content: '';
+      content: "";
       height: 10px;
       width: 10px;
       background: var(--clr-secondary-6);

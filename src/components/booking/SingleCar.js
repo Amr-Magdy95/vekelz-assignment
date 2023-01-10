@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { FaUserAlt } from "react-icons/fa";
 
 import {
   GearIcon2,
   PassengerIcon,
   EmptyHeart,
   FullHeart,
-} from "../assets/icons";
+} from "../../assets/icons";
 
 function SingleCar({
   name,

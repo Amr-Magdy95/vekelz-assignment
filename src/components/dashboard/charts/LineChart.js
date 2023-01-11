@@ -145,9 +145,11 @@ span{
 .tab-container{
   display: flex;
   column-gap: 10px;
+  background: var(--clr-grey-1);
+  border-radius: 20px;
 }
 .tab{
-  background: white;
+  background: var(--clr-grey-1);
   padding: 0.25rem 1rem;
   border-radius: 20px;
   text-transform: capitalize;
@@ -166,6 +168,25 @@ span{
     margin-left: -30px;
     border-radius: var(--borderRadius);
     
+  }
+
+  @media (max-width: 592px){
+    .subheading-container{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  @media (max-width: 280px){
+    .tab-container{
+      
+      column-gap: 5px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .tab{
+      width: 100%;
+    }
   }
 `;
 

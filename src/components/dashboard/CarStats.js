@@ -17,7 +17,7 @@ function CarStats() {
 const Wrapper = styled.section`
   display: grid;
   grid-row-gap: 2rem;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   grid-column-gap: .5rem;
   @media (min-width: 768px){
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));

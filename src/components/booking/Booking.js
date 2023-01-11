@@ -55,6 +55,7 @@ function Booking() {
   );
 }
 const Container = styled.main`
+
 h2{
   letter-spacing: normal;
 }
@@ -154,6 +155,7 @@ h2{
 
 const Wrapper = styled.section`
   display: grid;
+  padding-bottom: 5rem;
   margin-left: 0;
   align-items: center;
   grid-row-gap: 2rem;

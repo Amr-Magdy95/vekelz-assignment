@@ -20,6 +20,7 @@ function App() {
 
 const Wrapper = styled.section`
   height: 100%;
+  margin-bottom: 5rem;
   @media screen and (min-width: 992px) {
     display: grid;
     grid-template-columns: 1fr 4fr;

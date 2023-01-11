@@ -23,14 +23,18 @@ function Booking() {
       <h2>Booking</h2>
       <div className="filters">
         <div className="car-filters">
-          <select name="" id="">
-            <option value="">New</option>
-            <option value="">Used</option>
-          </select>
-          <select name="" id="">
-            <option value="">Toyota</option>
-            <option value="">Porsche</option>
-          </select>
+          <div className="car-state-container">
+            <select name="" id="">
+              <option value="">New</option>
+              <option value="">Used</option>
+            </select>
+          </div>
+          <div className="car-model-container">
+            <select name="" id="">
+              <option value="">Toyota</option>
+              <option value="">Porsche</option>
+            </select>
+          </div>
         </div>
 
         <div className="view-filters">
@@ -85,17 +89,43 @@ h2{
       }
 
   }  
+  .car-state-container, .car-model-container{
+    background: var(--white);
+    border-radius: 20px 20px 20px 20px;
+    width: 8rem;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: "";
+      top: -20px;
+      left: 70px;
+      width: 0; 
+      height: 0; 
+      border-top: 5px solid var(--clr-grey-5);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+        
+
+      margin: 2rem;
+    }
+  }
   select {
     border-radius: 20px 20px 20px 20px;
-    border-color: var(--clr-grey-1);
+    border-color: transparent;
     width: 8rem;
+    z-index: 8;
+    
     padding: 5px 15px;
     letter-spacing: var(--letterSpacing);
     color: var(--clr-grey-4);
+    background: transparent;
     fontweight: 600;
+    position: relative;
+    appearance: none;
   
     }
   }
+
   
   .dash-icon {
     height: 2.5rem;

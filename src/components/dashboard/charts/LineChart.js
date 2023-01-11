@@ -12,6 +12,7 @@ function LineChart(props) {
   useLayoutEffect(() => {
     // chart instance
     let x = am4core.create("linediv", am4charts.XYChart);
+    x.responsive.enabled = true;
     // Theme
     am4core.useTheme(am4themes_animated);
 
@@ -122,7 +123,7 @@ const Wrapper = styled.section`
 
 background: var(--white);
 border-radius: var(--borderRadius);
-padding: 1.5rem 2rem 0 2rem;
+padding: 1.5rem 0.5rem 0 0.5rem;
 .subheading-container{
   display: flex;
   justify-content: space-between;
@@ -165,7 +166,6 @@ span{
     width: 100%;
     height: 400px;
     background: var(--white);
-    margin-left: -30px;
     border-radius: var(--borderRadius);
     
   }
@@ -176,7 +176,7 @@ span{
       justify-content: center;
       align-items: center;
     }
-  @media (max-width: 280px){
+  @media (max-width: 370px){
     .tab-container{
       
       column-gap: 5px;

@@ -87,9 +87,9 @@ const Wrapper = styled.section`
   }
   .ui-widgets {
     position: relative;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 9rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 7rem;
     margin: 0 auto;
     border: 1.2rem solid var(--white);
     text-align: center;

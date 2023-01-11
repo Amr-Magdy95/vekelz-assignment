@@ -51,6 +51,9 @@ function Booking() {
   );
 }
 const Container = styled.main`
+h2{
+  letter-spacing: normal;
+}
 .view-filters {
   align-self: flex-end;
   justify-content: center;
@@ -95,8 +98,8 @@ const Container = styled.main`
   }
   
   .dash-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     background: var(--white);
     display: flex;
@@ -106,8 +109,8 @@ const Container = styled.main`
     0 10px 10px -5px rgba(0, 0, 0, 0.2);
   }
   .view-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     background: var(--clr-purple-dark);
     display: flex;
@@ -124,10 +127,10 @@ const Wrapper = styled.section`
   margin-left: 0;
   align-items: center;
   grid-row-gap: 2rem;
-  padding: 2rem 1rem;
   grid-column-gap: 2rem;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 `;
 
 export default Booking;

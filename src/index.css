@@ -1,7 +1,7 @@
 /*
 Global Styles
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 html {
   height: 100%;
 }
@@ -48,7 +48,7 @@ body {
   --black: #222;
   --white: #fff;
   /* fonts*/
-  --font-family: Roboto;
+  --font-family: 'DM Sans', sans-serif;
   /* rest of the vars*/
   --backgroundColor: var(--clr-grey-1);
   --textColor: var(--clr-grey-8);

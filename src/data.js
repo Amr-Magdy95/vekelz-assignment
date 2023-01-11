@@ -1,8 +1,14 @@
 import Car from "./assets/images/car.png";
+import BCar1 from './assets/images/booking-car-1.png';
+import BCar2 from './assets/images/booking-car-2.png';
+import BCar3 from './assets/images/booking-car-3.png';
+import BCar4 from './assets/images/booking-car-4.png';
+import BCar5 from './assets/images/booking-car-5.png';
+import BCar6 from './assets/images/booking-car-6.png';
 export const cars = [
   {
     id: 1,
-    img: "https://www.ccarprice.com/products/Porsche_718_Cayman_2022.jpg",
+    img: BCar1,
     name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
@@ -12,8 +18,18 @@ export const cars = [
   },
   {
     id: 2,
-    img: "https://imgd.aeplcdn.com/1056x594/cw/ec/23766/Ford-Mustang-Exterior-126883.jpg?wm=1&q=75",
-    name: "ford mustang gt",
+    img: BCar2,
+    name: "porsche 718 cayman s",
+    type: "coupe",
+    passengers: 4,
+    gear_type: "manual",
+    rental_price: 400,
+    favorite: true,
+  },
+  {
+    id: 3,
+    img: BCar3,
+    name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
     gear_type: "manual",
@@ -21,29 +37,19 @@ export const cars = [
     favorite: false,
   },
   {
-    id: 3,
-    img: "https://www.ccarprice.com/products/Toyota-GR-Supra-2020_1.jpg",
-    name: "toyata supra gr",
-    type: "coupe",
-    passengers: 4,
-    gear_type: "manual",
-    rental_price: 400,
-    favorite: true,
-  },
-  {
     id: 4,
-    img: "https://media.ed.edmunds-media.com/bmw/x5/2021/oem/2021_bmw_x5_4dr-suv_m50i_fq_oem_1_815.jpg",
-    name: "Bmw x5",
+    img: BCar4,
+    name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
     gear_type: "manual",
     rental_price: 400,
-    favorite: true,
+    favorite: false,
   },
   {
     id: 5,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Chevrolet_Corvette_C8_Stingray_blue.jpg/1024px-Chevrolet_Corvette_C8_Stingray_blue.jpg",
-    name: "Chevrolet Corvette",
+    img: BCar5,
+    name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
     gear_type: "manual",
@@ -52,8 +58,8 @@ export const cars = [
   },
   {
     id: 6,
-    img: "https://www.ccarprice.com/products/Toyota_LandCruiser_2022_1.jpg",
-    name: "Toyota Land Cruiser",
+    img: BCar6,
+    name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
     gear_type: "manual",
@@ -62,8 +68,28 @@ export const cars = [
   },
   {
     id: 7,
-    img: "https://www.ccarprice.com/products/Toyota_LandCruiser_2022_1.jpg",
-    name: "Toyota Land Cruiser",
+    img: BCar1,
+    name: "porsche 718 cayman s",
+    type: "coupe",
+    passengers: 4,
+    gear_type: "manual",
+    rental_price: 400,
+    favorite: false,
+  },
+  {
+    id: 8,
+    img: BCar2,
+    name: "porsche 718 cayman s",
+    type: "coupe",
+    passengers: 4,
+    gear_type: "manual",
+    rental_price: 400,
+    favorite: false,
+  },
+  {
+    id: 9,
+    img: BCar3,
+    name: "porsche 718 cayman s",
     type: "coupe",
     passengers: 4,
     gear_type: "manual",

@@ -49,6 +49,7 @@ const Wrapper = styled.section`
     display: flex;
     column-gap: 0.5rem;
   }
+  
   .logo-container {
     display: flex;
     width: 3rem;
@@ -63,22 +64,29 @@ const Wrapper = styled.section`
       transform: scale(2);
     }
   }
-  @media (min-width: 992px) {
-    display: block;
+   h2{
+    letter-spacing: var(--letterSpacing);
+    color: #1F2128;
+    font-weight: 700;
   }
+  
 
   a {
     display: block;
-    color: var(--clr-purple-dark);
+    color: var(--clr-grey-5);
     transition: var(--transition);
     font-size: 1.25rem;
   }
   a:hover {
     border-left: 5px solid var(--clr-primary-1);
     padding-left: 10px;
-    color: var(--clr-primary-1);
+    color: var(--clr-grey-6);
     background: var(--clr-grey-1);
     transform: scale(1.1);
+
+  }
+  @media (min-width: 992px) {
+    display: block;
   }
 `;
 

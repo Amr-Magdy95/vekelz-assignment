@@ -47,7 +47,11 @@ function SingleCar({
 }
 
 const Wrapper = styled.article`
-  min-width: 300px;
+  min-width: 240px;
+  h5{
+    font-size: 1rem;
+    
+  }
   transition: var(--transition);
   box-shadow: var(--shadow-1);
 
@@ -56,7 +60,7 @@ const Wrapper = styled.article`
     box-shadow: var(--shadow-4);
   }
 
-  padding: 10px 10px 5px 10px;
+  padding: 1.25rem 1rem;
   background: var(--white);
   border-radius: var(--borderRadius);
   .header {
@@ -82,8 +86,9 @@ const Wrapper = styled.article`
     letter-spacing: var(--letterSpacing);
   }
   .car-img {
-    height: 10rem;
-    object-fit: cover;
+    height: 8rem;
+    width: 80%;
+    margin: 0 auto;
   }
   .footer {
     display: flex;
@@ -97,7 +102,7 @@ const Wrapper = styled.article`
     color: var(--clr-grey-4);
   }
   .price {
-    color: var(--clr-grey-9);
+    color: var(--clr-grey-6);
     font-weight: 900;
     letter-spacing: var(--letterSpacing);
   }

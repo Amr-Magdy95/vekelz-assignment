@@ -8,6 +8,7 @@ am4core.useTheme(am4themes_animated);
 
 function BarChart(props) {
   const chart = useRef(null);
+  const [timeUnit, setTimeUnit] = "day";
 
   useLayoutEffect(() => {
     // chart instance
@@ -34,33 +35,53 @@ function BarChart(props) {
       timeUnit: "hour",
       count: 1,
     };
-    // dateAxis.renderer.grid.template.location = 1;
-    dateAxis.title.text = "Time";
     dateAxis.renderer.labels.template.location = 0.5;
-    dateAxis.renderer.minGridDistance = 10;
+    dateAxis.renderer.minGridDistance = 3;
     dateAxis.renderer.labels.template.fill = am4core.color("#A0CA92");
     dateAxis.renderer.labels.template.fontSize = 13;
-    dateAxis.startLocation = 0.5;
-    dateAxis.endLocation = 0.5;
+    dateAxis.startLocation = 0.05;
+    dateAxis.endLocation = 0.95;
     dateAxis.renderer.labels.template.rotation = 90;
     dateAxis.renderer.labels.template.verticalCenter = "middle";
     dateAxis.renderer.labels.template.horizontalCenter = "left";
     dateAxis.dateFormats.setKey("hour", "h a");
-    //y axis
+
+    /*
+     ** Y-Axis
+     */
     let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
     valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
     valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
+    /*
+     ** End of Y-Axis
+     */
 
-    // series
+    /*
+     ** Series
+     */
     let series = x.series.push(new am4charts.ColumnSeries());
+    // series data fields
     series.dataFields.dateX = "date";
     series.dataFields.valueY = "value";
-
-    // series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-
+    // border of series itens
+    series.strokeWidth = 0;
+    // color of different columns
+    series.fill = am4core.color("#F4F5F9");
+    // data shown on hover
     series.columns.template.tooltipText =
-      "{dateX.formatDate('h a')}\n {valueY}K";
+      "{dateX.formatDate('h a')}\n {valueY}";
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#222");
+    series.tooltip.label.fill = am4core.color("#fff");
+
+    // column color on hover
+    let hoverState = series.columns.template.states.create("hover");
+    hoverState.properties.fill = am4core.color("#2884FF");
+    hoverState.properties.fillOpacity = 0.8;
+    /*
+     ** End of Series
+     */
 
     // cursor
     x.cursor = new am4charts.XYCursor();
@@ -81,17 +102,17 @@ function BarChart(props) {
 
   return (
     <Wrapper className="chart-wrapper">
-      <h3>Miles <span>Statistics</span></h3>
+      <h3>
+        Miles <span>Statistics</span>
+      </h3>
       <div className="subheading-container">
-      <ul className="tab-container">
-        <li className="tab tab-active">Day</li>
-        <li className="tab">week</li>
-        <li className="tab">month</li>
+        <ul className="tab-container">
+          <li className="tab tab-active">Day</li>
+          <li className="tab">week</li>
+          <li className="tab">month</li>
+        </ul>
 
-      </ul>
-
-      <span className="milage">256 miles</span>
-
+        <span className="milage">256 miles</span>
       </div>
       <div id="chartdiv"></div>
     </Wrapper>
@@ -99,87 +120,78 @@ function BarChart(props) {
 }
 
 const Wrapper = styled.section`
+  @media screen and (min-width: 200px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    width: 95%;
+  }
+  @media screen and (min-width: 1170px) {
+    width: 49%;
+  }
 
-@media screen and (min-width: 200px){
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 768px){
-  width: 95%;
-  
-}
-@media screen and (min-width: 1170px){
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  padding: 1.5rem 0.5rem 0 0rem;
+  .subheading-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    letter-spacing: normal;
+    font-weight: 900;
+  }
+  span {
+    font-weight: 400;
+  }
+  .milage {
+    text-transform: capitalize;
+    color: var(--clr-grey-5);
+    font-weight: 600;
+  }
+  .tab-container {
+    display: flex;
+    column-gap: 10px;
+  }
+  .tab {
+    background: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    text-transform: capitalize;
+  }
 
-  width: 49%;
-}
+  .tab-active {
+    background: var(--clr-secondary-1);
+    color: white;
+  }
 
-background: var(--white);
-border-radius: var(--borderRadius);
-padding: 1.5rem .5rem 0 0rem;
-.subheading-container{
-  display: flex;
-  justify-content: space-between;
-}
-h3{
-  letter-spacing: normal;
-  font-weight: 900;
-  
-  
-}
-span{
-  font-weight: 400;
-}
-.milage{
-  text-transform: capitalize;
-  color: var(--clr-grey-5);
-  font-weight: 600;
-
-}
-.tab-container{
-  display: flex;
-  column-gap: 10px;
-}
-.tab{
-  background: white;
-  padding: 0.25rem 1rem;
-  border-radius: 20px;
-  text-transform: capitalize;
-}
-
-.tab-active{
-  background: var(--clr-secondary-1);
-  color: white;
-}
-
-
-  #chartdiv{
+  #chartdiv {
     width: 100%;
     height: 400px;
     background: var(--white);
     border-radius: var(--borderRadius);
-    
   }
 
-  @media (max-width: 592px){
-    .subheading-container{
+  @media (max-width: 592px) {
+    .subheading-container {
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-  @media (max-width: 370px){
-    .tab-container{
-      
+  @media (max-width: 370px) {
+    .tab-container {
       column-gap: 5px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    .tab{
+    .tab {
       width: 100%;
     }
-  } 
+  }
 `;
 
 export default BarChart;

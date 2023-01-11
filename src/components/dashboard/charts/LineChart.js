@@ -17,13 +17,13 @@ function LineChart(props) {
 
     // data
     let data = [
-      { date: new Date(2018, 3, 20, 1), name: "name" + 0, value: 1500 },
-      { date: new Date(2018, 3, 20, 2), name: "name" + 1, value: 1000 },
-      { date: new Date(2018, 3, 20, 3), name: "name" + 2, value: 1000 },
-      { date: new Date(2018, 3, 20, 4), name: "name" + 3, value: 1500 },
-      { date: new Date(2018, 3, 20, 5), name: "name" + 4, value: 1000 },
-      { date: new Date(2018, 3, 20, 6), name: "name" + 5, value: 1540 },
-      { date: new Date(2018, 3, 20, 7), name: "name" + 6, value: 1530 },
+      { date: new Date(2018, 3, 20, 7), name: "name" + 0, value: 100 },
+      { date: new Date(2018, 3, 20, 9), name: "name" + 1, value: 500 },
+      { date: new Date(2018, 3, 20, 11), name: "name" + 2, value: 1000 },
+      { date: new Date(2018, 3, 20, 13), name: "name" + 3, value: 400 },
+      { date: new Date(2018, 3, 20, 15), name: "name" + 4, value: 50 },
+      { date: new Date(2018, 3, 20, 17), name: "name" + 5, value: 400 },
+      { date: new Date(2018, 3, 20, 19), name: "name" + 6, value: 1000 },
     ];
     x.data = data;
 
@@ -35,33 +35,39 @@ function LineChart(props) {
     };
     // dateAxis.renderer.grid.template.location = 1;
     dateAxis.title.text = "Time";
-    dateAxis.renderer.labels.template.location = 0.5;
+    dateAxis.renderer.labels.template.location = 0;
     dateAxis.renderer.minGridDistance = 10;
     dateAxis.renderer.labels.template.fill = am4core.color("#A0CA92");
-    dateAxis.renderer.labels.template.fontSize = 20;
+    dateAxis.renderer.labels.template.fontSize = 12;
     dateAxis.startLocation = 0.5;
     dateAxis.endLocation = 0.5;
-    dateAxis.renderer.cellStartLocation = 0.2;
-    dateAxis.renderer.cellEndLocation = 0.9;
+    
     dateAxis.renderer.labels.template.rotation = 90;
     dateAxis.renderer.labels.template.verticalCenter = "middle";
     dateAxis.renderer.labels.template.horizontalCenter = "left";
     dateAxis.dateFormats.setKey("hour", "h a");
+    
+    // dateAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
     //y axis
     let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
     valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
     valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
+    valueAxis.baseValue = -1000;
 
     // series
-    let series = x.series.push(new am4charts.ColumnSeries());
+    let series = x.series.push(new am4charts.LineSeries());
     series.dataFields.dateX = "date";
     series.dataFields.valueY = "value";
+    series.strokeWidth = 2;
+    series.fillOpacity = 0.1;
+    series.stroke = am4core.color("#ff764c"); 
+    series.fill = am4core.color("#ff764c"); 
+
+    
 
     // series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
 
-    series.columns.template.tooltipText =
-      "{dateX.formatDate('h a')}\n {valueY}K";
 
     // cursor
     x.cursor = new am4charts.XYCursor();

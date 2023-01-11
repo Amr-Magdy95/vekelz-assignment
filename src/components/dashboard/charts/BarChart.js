@@ -38,7 +38,7 @@ function BarChart(props) {
     dateAxis.renderer.labels.template.location = 0.5;
     dateAxis.renderer.minGridDistance = 10;
     dateAxis.renderer.labels.template.fill = am4core.color("#A0CA92");
-    dateAxis.renderer.labels.template.fontSize = 20;
+    dateAxis.renderer.labels.template.fontSize = 13;
     dateAxis.startLocation = 0.5;
     dateAxis.endLocation = 0.5;
     dateAxis.renderer.labels.template.rotation = 90;

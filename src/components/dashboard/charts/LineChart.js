@@ -35,7 +35,6 @@ function LineChart(props) {
       count: 1,
     };
     // dateAxis.renderer.grid.template.location = 1;
-    dateAxis.title.text = "Time";
     dateAxis.renderer.labels.template.location = 0;
     dateAxis.renderer.minGridDistance = 10;
     dateAxis.renderer.labels.template.fill = am4core.color("#A0CA92");

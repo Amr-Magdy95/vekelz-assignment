@@ -35,23 +35,28 @@ function BarChart(props) {
       timeUnit: "hour",
       count: 1,
     };
+    // setting axis label to center, color, font-size and format
     dateAxis.renderer.labels.template.location = 0.5;
-    dateAxis.renderer.minGridDistance = 3;
     dateAxis.renderer.labels.template.fill = am4core.color("#A0CA92");
     dateAxis.renderer.labels.template.fontSize = 13;
-    dateAxis.startLocation = 0.05;
-    dateAxis.endLocation = 0.95;
     dateAxis.renderer.labels.template.rotation = 90;
     dateAxis.renderer.labels.template.verticalCenter = "middle";
     dateAxis.renderer.labels.template.horizontalCenter = "left";
     dateAxis.dateFormats.setKey("hour", "h a");
+    // setting min grid distance
+    dateAxis.renderer.minGridDistance = 3;
+    // setting axis start and end locations
+    dateAxis.startLocation = 0.05;
+    dateAxis.endLocation = 0.95;
 
     /*
      ** Y-Axis
      */
     let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
+    // setting grid lines colors
     valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
+    // setting axis label colors
     valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
     /*
      ** End of Y-Axis

@@ -97,10 +97,11 @@ const Wrapper = styled.section`
       width: 9rem;
       height: 2rem;
       color: var(--clr-primary-4);
-      font-size: 1.25rem;
+      font-size: 0.75rem;
       border-color: transparent;
     }
     input::placeholder {
+      font-size: 1rem;
     }
   }
 

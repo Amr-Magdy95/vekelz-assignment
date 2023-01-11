@@ -32,8 +32,12 @@ function LineChart(props) {
     let dateAxis = x.xAxes.push(new am4charts.DateAxis());
     dateAxis.baseInterval = {
       timeUnit: "hour",
-      count: 1,
+      count: 2,
     };
+    dateAxis.gridIntervals.setAll([
+      { timeUnit: "second", count: 1 },
+      { timeUnit: "hour", count: 2 }
+    ]);
     // dateAxis.renderer.grid.template.location = 1;
     dateAxis.renderer.labels.template.location = 0;
     dateAxis.renderer.minGridDistance = 10;
@@ -122,7 +126,7 @@ const Wrapper = styled.section`
 
 background: var(--white);
 border-radius: var(--borderRadius);
-padding: 1.5rem 0.5rem 0 0.5rem;
+padding: 2rem 1rem 0rem 2rem;
 .subheading-container{
   display: flex;
   justify-content: space-between;

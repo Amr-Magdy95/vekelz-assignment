@@ -125,6 +125,7 @@ function BarChart(props) {
 }
 
 const Wrapper = styled.section`
+  padding: 2rem 1rem 0rem 2rem;
   @media screen and (min-width: 200px) {
     width: 80%;
     margin: 0 auto;
@@ -139,7 +140,6 @@ const Wrapper = styled.section`
 
   background: var(--white);
   border-radius: var(--borderRadius);
-  padding: 1.5rem 0.5rem 0 0rem;
   .subheading-container {
     display: flex;
     justify-content: space-between;

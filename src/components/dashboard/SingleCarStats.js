@@ -28,30 +28,29 @@ function SingleCarStats({ name, recommended, rental_price, img, kms, color }) {
 
 const Wrapper = styled.article`
   width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0.25rem;
+  box-shadow: var(--shadow-3);
   display: grid;
-  grid-template-rows: 2rem 1fr 2rem 2rem;
+  grid-template-rows: 1rem 1fr 2rem 1rem;
   .card-img-container{
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  box-shadow: var(--shadow-3);
-  @media (min-width: 768px){
-    width: 100%;
-  }
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  
   background: var(--white);
   border-radius: var(--borderRadius);
   .recommended {
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     column-gap: 5px;
     font-weight: 600;
   }
   .card-title {
     letter-spacing: normal;
+    font-size: 1rem;
   }
   .card-info {
     display: flex;
@@ -61,16 +60,28 @@ const Wrapper = styled.article`
     display: flex;
     column-gap: 15px;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--clr-grey-4);
     
   }
   svg{
-    transform: scale(1.25);
+    transform: scale(.75);
   }
 
   .car-price{
-    font-size: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--clr-grey-4);
   }
+
+  @media (min-width: 768px){
+   width: 90%; 
+  }
+
+  @media ( min-width: 1170px){
+    width: 100%;
+  }
+
+  
 
 
 `;

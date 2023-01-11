@@ -17,16 +17,15 @@ function CarStats() {
 const Wrapper = styled.section`
   display: grid;
   grid-row-gap: 2rem;
-  grid-column-gap: 1rem;
-
+  margin-bottom: 5rem;
+  grid-column-gap: .5rem;
   @media (min-width: 768px){
-    padding: 0rem 1rem;
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
   }
+  
 
   @media (min-width: 1170px){
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    padding: 0rem;
+    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
   }
 
 `

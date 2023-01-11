@@ -1,4 +1,6 @@
-import Car from "./assets/images/car.png";
+import SCar1 from "./assets/images/stat-car-1.png";
+import SCar2 from "./assets/images/stat-car-2.png";
+import SCar3 from "./assets/images/stat-car-3.png";
 import BCar1 from './assets/images/booking-car-1.png';
 import BCar2 from './assets/images/booking-car-2.png';
 import BCar3 from './assets/images/booking-car-3.png';
@@ -100,7 +102,7 @@ export const cars = [
 export const carStats = [
   {
     id: 1,
-    img: Car,
+    img: SCar1,
     name: "porsche 718 cayman s",
     recommended: 64,
     kms: 132,
@@ -109,7 +111,7 @@ export const carStats = [
   },
   {
     id: 2,
-    img: Car,
+    img: SCar2,
     name: "porsche 718 cayman s",
     recommended: 64,
     kms: 132,
@@ -118,7 +120,7 @@ export const carStats = [
   },
   {
     id: 3,
-    img: Car,
+    img: SCar3,
     name: "porsche 718 cayman s",
     recommended: 64,
     kms: 132,

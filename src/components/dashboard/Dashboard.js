@@ -20,8 +20,8 @@ function Dashboard(props) {
 }
 
 const Wrapper = styled.section`
-  margin-top: 7rem;
-  padding: 1rem 2rem;
+  margin-top: 5rem;
+  padding: 1rem;
   
 
   }

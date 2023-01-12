@@ -12,29 +12,24 @@ function Sidebar() {
         </div>
         <h2>Motiv.</h2>
       </div>
-      <Link to="/" className="nav-item">
-        {" "}
-        <span className="logo">
-          {" "}
-          <DashboardIcon />{" "}
-        </span>{" "}
-        Dashboard
-      </Link>
-      <Link to="/booking" className="nav-item">
-        {" "}
-        <span className="logo">
-          {" "}
-          <BookingIcon />{" "}
-        </span>{" "}
-        Booking
-      </Link>
+      <div className="nav-container">
+        <Link to="/" className="nav-item">
+          <DashboardIcon />
+          Dashboard
+        </Link>
+        <Link to="/booking" className="nav-item">
+          <BookingIcon />
+          Booking
+        </Link>
+      </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
   display: none;
-  position: sticky;
+  position: fixed;
+  width: 20vw;
   top: 0;
   left: 0;
   height: 100%;
@@ -49,7 +44,6 @@ const Wrapper = styled.section`
     display: flex;
     column-gap: 0.5rem;
   }
-  
   .logo-container {
     display: flex;
     width: 3rem;
@@ -64,12 +58,24 @@ const Wrapper = styled.section`
       transform: scale(2);
     }
   }
-   h2{
+  .nav-container{
+    padding-left: 1rem;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .active {
+    background-color: var(--clr-grey-1);
+  }
+
+  h2 {
     letter-spacing: var(--letterSpacing);
-    color: #1F2128;
+    color: #1f2128;
     font-weight: 700;
   }
-  
 
   a {
     display: block;
@@ -83,7 +89,6 @@ const Wrapper = styled.section`
     color: var(--clr-grey-6);
     background: var(--clr-grey-1);
     transform: scale(1.1);
-
   }
   @media (min-width: 992px) {
     display: block;

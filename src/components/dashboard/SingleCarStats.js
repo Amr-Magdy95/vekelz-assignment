@@ -29,7 +29,7 @@ function SingleCarStats({ name, recommended, rental_price, img, kms, color }) {
 const Wrapper = styled.article`
   width: 80%;
   margin: 0 auto;
-  padding: 1rem 0.25rem;
+  padding: 1rem;
   box-shadow: var(--shadow-3);
   display: grid;
   grid-template-rows: 1rem 1fr 2rem 1rem;
@@ -75,10 +75,12 @@ const Wrapper = styled.article`
 
   @media (min-width: 768px){
    width: 90%; 
+   padding: 1.25rem;
   }
 
   @media ( min-width: 1170px){
     width: 100%;
+
   }
 
   

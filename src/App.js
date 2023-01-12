@@ -4,10 +4,10 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <Wrapper>
-      <BrowserRouter>
+      <BrowserRouter >
         <Sidebar />
-        <div>
-          <Navbar />
+        <Navbar />
+        <div className="main-container">
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/booking" element={<Booking />}></Route>
@@ -22,9 +22,12 @@ const Wrapper = styled.section`
   height: 100%;
   margin-bottom: 5rem;
   @media screen and (min-width: 992px) {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-column-gap: 0;
+    .main-container{
+      margin-left: 20%;
+      display: grid;
+      grid-column-gap: 0;
+
+    }
   }
 `;
 

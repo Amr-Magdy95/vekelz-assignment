@@ -85,9 +85,16 @@ const Wrapper = styled.article`
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
   }
-  .car-img {
-    height: 8rem;
-    width: 80%;
+  display: grid;
+  grid-template-rows: 1rem 1rem 1fr  1rem;
+  .card-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .car-img{
+    height: 6rem;
+    width: 12rem;
     margin: 0 auto;
   }
   .footer {

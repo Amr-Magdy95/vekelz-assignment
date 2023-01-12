@@ -55,7 +55,7 @@ function LineChart(props) {
     //y axis
     let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
-    valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
+    valueAxis.renderer.grid.template.stroke = false;
     valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
     valueAxis.baseValue = -1000;
 

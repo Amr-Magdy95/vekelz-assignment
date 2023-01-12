@@ -101,7 +101,7 @@ const Wrapper = styled.section`
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
   .energy {
     background: var(--clr-purple-dark);

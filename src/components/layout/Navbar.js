@@ -215,7 +215,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    left: 22vw;
+    left: 20vw;
     width: 80vw;
     display: flex;
 
@@ -231,7 +231,6 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 1080px){
-    left: 20vw;
   }
 `;
 

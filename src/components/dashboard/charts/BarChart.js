@@ -55,7 +55,7 @@ function BarChart(props) {
     let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
     // setting grid lines colors
-    valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
+    valueAxis.renderer.grid.template.stroke = false;
     // setting axis label colors
     valueAxis.renderer.labels.template.fill = am4core.color("#ffffff");
     /*
